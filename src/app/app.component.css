@@ -1,0 +1,28 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+*{
+    font-family: 'Lato', sans-serif;
+    text-size-adjust: 100%;
+    font-weight: 400;
+}
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c5c7c8;
+    border: 0px none #ccc;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c5c7c8;
+}
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border: 0px none #ccc;
+    border-bottom-right-radius: 6px;
+}
