@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.gora{
+    background-color: #1768ac;
+    color: white;
+    font-style: bold;
+    font-size: 20px ;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}
+.menu{
+    margin-top: 20px;
+}
