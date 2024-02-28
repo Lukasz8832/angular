@@ -1,17 +1,28 @@
-html, body {
+body{
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
+    box-sizing: border-box;
+    font-size: 0.9rem;
 }
-.gora{
-    background-color: #1768ac;
-    color: white;
-    font-style: bold;
-    font-size: 20px ;
-    text-align: center;
-    width: 100%;
-    height: 100px;
+*{
+    font-family: 'Lato', sans-serif;
+    text-size-adjust: 100%;
+    font-weight: 400;
 }
-.menu{
-    margin-top: 20px;
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c5c7c8;
+    border: 0px none #ccc;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c5c7c8;
+}
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border: 0px none #ccc;
+    border-bottom-right-radius: 6px;
 }
