@@ -1,0 +1,10 @@
+
+{
+    "/products/**": {
+    "target": "https://fakestoreapi.com",
+    "secure": false,
+    "logLevel":"debug",
+    "changeOrigin": true,
+    "cookieDomainRewrite": "localhost"
+    }
+}

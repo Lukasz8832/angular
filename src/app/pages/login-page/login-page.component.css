@@ -75,3 +75,17 @@ body{
 .zarejestruj{
     text-align: center;
 }
+.error{
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    border: red solid;
+    background-color: red;
+    border-radius: 20px;
+    width: 60%;
+    padding: 15px;
+    position: absolute;
+    bottom: -25%;
+    right: 16%;
+    visibility: hidden;
+}
