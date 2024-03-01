@@ -12,10 +12,10 @@
             <h1>Logowanie</h1>
             </div>
             <div class="wprowadzanie">
-                <input id="naz" type="text" placeholder="Nazwa użytkownika" >
+                <input formControlName="email" id="email" type="email" placeholder="Nazwa użytkownika" required>
             </div>
             <div class="wprowadzanie">
-                <input type="text" placeholder="Hasło" required>
+                <input  formControlName="password" id="password" type="password" placeholder="password" required>
             </div>
             <div class="zapamietaj">
                 <label><input class="check" type="checkbox">Zapamiętać dane logowania?</label>
@@ -23,7 +23,7 @@
             <div class="ok">
                 <a href="">Zapomniałem hasło</a>
             </div>
-            <button (click)="essa()" class="zaloguj" type="submit">Zaloguj</button>
+            <button (click)="logowanie()" class="zaloguj" type="submit">Zaloguj</button>
             <div class="zarejestruj">
                 <a href="">Zarejestruj się</a>
             </div>
