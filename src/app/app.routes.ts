@@ -11,4 +11,5 @@ export const routes: Routes = [
         path: 'sklep',
         loadChildren:() => import("./pages/home-page/home-page.module").then(m => m.HomePageModule), 
     },
+
 ];

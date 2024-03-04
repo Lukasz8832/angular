@@ -54,7 +54,7 @@ submit(){
          console.log(response.body)
       }
       else{
-        this.customErrorLogin! = "Brak obiekru odpowiedzi"
+        this.customErrorLogin! = "Brak obiektu odpowiedzi"
       }
     },
     error: (errorResponse) => {

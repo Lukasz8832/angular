@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavigationComponent } from '../../components/navigation/navigation.component';
+import {HttpClientModule} from '@angular/common/http'
 
  const routes: Routes = [
   {
@@ -16,7 +17,8 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
   imports: [
     CommonModule,
     NavigationComponent,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule
   ],
   exports: [HomePageComponent]
 })
