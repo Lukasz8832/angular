@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestService } from '../../services/rest.service';
+import { RestService, produkt } from '../../services/rest.service';
 @Component({
   selector: 'app-home-page',
   standalone: false,
@@ -7,15 +7,11 @@ import { RestService } from '../../services/rest.service';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent implements OnInit {
-  public essa: Array<any> = []
   constructor(private apiService: RestService){
-      
   }
   ngOnInit() : any {
     this.apiService.getProdukt().subscribe(
-      (data) => { 
-        this.essa.push[this.data.name]
-
-      });
+      
+    );
   }
 }

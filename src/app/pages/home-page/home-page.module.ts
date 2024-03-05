@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavigationComponent } from '../../components/navigation/navigation.component';
 import {HttpClientModule} from '@angular/common/http'
+import { ProductListComponent } from '../../components/product-list/product-list.component';
 
  const routes: Routes = [
   {
@@ -18,7 +19,8 @@ import {HttpClientModule} from '@angular/common/http'
     CommonModule,
     NavigationComponent,
     RouterModule.forChild(routes),
-    HttpClientModule
+    HttpClientModule,
+    ProductListComponent,
   ],
   exports: [HomePageComponent]
 })

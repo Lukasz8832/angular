@@ -1,0 +1,17 @@
+
+<div class="produkty">
+        @for(produkt of this.products_list; track $index){
+        <div class="karta">
+            <div class="obraz-div"></div>
+            <img class="obraz" src="{{produkt.image}}">
+            <div class="tekst">
+                <div class="nazwa">
+                    {{produkt.title}}
+                </div>
+                <div class="cena">
+                    {{produkt.price}}
+                </div>
+            </div>
+        </div>
+        }
+</div>

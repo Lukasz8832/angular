@@ -1,5 +1,5 @@
 .pasek{
-    position: absolute;
+    position: sticky;
     top: 10px;
     background-color: #5DCCFF;
     width: 98.4%;
