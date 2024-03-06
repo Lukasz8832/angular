@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavigationComponent } from '../../components/navigation/navigation.component';
 import {HttpClientModule} from '@angular/common/http'
 import { ProductListComponent } from '../../components/product-list/product-list.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
  const routes: Routes = [
   {
@@ -21,6 +22,7 @@ import { ProductListComponent } from '../../components/product-list/product-list
     RouterModule.forChild(routes),
     HttpClientModule,
     ProductListComponent,
+    FooterComponent,
   ],
   exports: [HomePageComponent]
 })

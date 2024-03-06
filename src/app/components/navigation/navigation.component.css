@@ -1,12 +1,12 @@
+
 .pasek{
     position: sticky;
-    top: 10px;
-    background-color: #5DCCFF;
+    top: 0;
+    background-color: #2081c3;
     width: 98.4%;
     color: white;
     display: grid;
     border-radius: 40px;
-    top: 4px;
     justify-content: center;
     align-items: center;
     text-align: center;

@@ -1,0 +1,15 @@
+footer{
+    position: absolute;
+    bottom: -112px;
+    padding: 8px;
+    width: 99%;
+    background-color: #2081c3;
+    color: white;
+}
+.zawartosc{
+    display: grid;
+    grid-template-columns: .5fr .5fr .5fr 1fr;
+}
+.copyrights{
+    text-align:  right;
+}
