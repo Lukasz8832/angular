@@ -1,0 +1,19 @@
+<head>
+
+</head>
+<body>
+    <app-navigation></app-navigation>
+    <div>
+        <div class="produkt">
+            <div class="obraz-div"><img class="obraz" src="{{produkt?.image}}"></div>
+            <div class="tekst">
+                <div class="nazwa">{{produkt?.title}}</div>
+                <div class="category"> kategoria: {{produkt?.category}}</div>
+                <div class="opis">{{produkt?.description}}</div>
+                <div class="cena">{{produkt?.price}} zł</div>
+                <button class="dodaj">Dodaj do koszyka</button>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</body>

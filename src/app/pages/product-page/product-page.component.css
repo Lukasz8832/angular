@@ -1,0 +1,32 @@
+.produkt{
+    width: 70%;
+    display: grid;
+    margin-left: 35.5%;
+    margin-top: 3%;
+    grid-template-columns: 1FR 1FR;
+}
+.obraz{
+    width: 60%;
+}
+.tekst{
+    width: 80%;
+    display: grid;
+    height: 400px;
+}
+.nazwa{
+    text-align: center;
+}
+.dodaj{
+    width: 30%;
+    height: 30px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+}
+.dodaj:hover{
+    cursor: pointer;
+}
+.dodaj:active{
+
+}

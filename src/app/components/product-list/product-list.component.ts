@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService, produkt } from '../../services/rest.service';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -13,10 +15,16 @@ export class ProductListComponent implements OnInit{
   products?: Subscription
   //products_lista: Array<any> = [];
   products_list?: Array<produkt>
-  constructor(private apiService: RestService){
+  link = ""
+  idParam?: string|number
+  constructor(private apiService: RestService, private http: HttpClient, private router: Router){
   }
   ngOnInit() : any {
     this.products_lista()
+    
+  }
+  navigateTo(id: number){
+    this.router.navigate([`/produkt/${id}`])
   }
   products_lista()
   {

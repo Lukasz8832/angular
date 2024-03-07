@@ -10,7 +10,7 @@
                 </div>
                 <div class="cena-kup">
                     {{produkt.price}} zł
-                    <button class="kupuj" title="Dodaj do koszyka" type="submit">Dodaj do koszyka</button>
+                    <button (click)="navigateTo(produkt.id)" class="kupuj" title="Dodaj do koszyka" type="submit">Dodaj do koszyka</button>
                 </div>
             </div>
         </div>

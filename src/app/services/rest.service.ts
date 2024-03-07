@@ -19,7 +19,14 @@ export class RestService {
   }
   link = "https://fakestoreapi.com"
   getProdukt(): Observable<HttpResponse<Array<produkt>>>{
-    return this.http.get<Array<produkt>>(this.link + "/products",
+    return this.http.get<Array<produkt>>(this.link + "/products/",
+    {
+      observe: 'response',
+      responseType: 'json'
+    })
+  }
+  getProduktById(id: number): Observable<HttpResponse<produkt>>{
+    return this.http.get<produkt>(this.link + `/products/${id}`,
     {
       observe: 'response',
       responseType: 'json'

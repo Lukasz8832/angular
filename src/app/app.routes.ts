@@ -11,5 +11,10 @@ export const routes: Routes = [
         path: 'sklep',
         loadChildren:() => import("./pages/home-page/home-page.module").then(m => m.HomePageModule), 
     },
+    {
+    path: 'produkt/:id',
+    loadChildren:() => import("./pages/product-page/product-page.module").then(m => m.ProductPageModule), 
+},
+
 
 ];
