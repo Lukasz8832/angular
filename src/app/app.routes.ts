@@ -15,6 +15,10 @@ export const routes: Routes = [
     path: 'produkt/:id',
     loadChildren:() => import("./pages/product-page/product-page.module").then(m => m.ProductPageModule), 
 },
+{
+    path: 'koszyk',
+    loadChildren:() => import("./pages/shoping-cart-page/shoping-cart-page.module").then(m => m.ShopingCartPageModule), 
+},
 
 
 ];

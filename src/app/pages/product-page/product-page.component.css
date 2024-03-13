@@ -13,8 +13,11 @@
     display: grid;
     height: 400px;
 }
-.nazwa{
+.nazwa{ 
     text-align: center;
+}
+.nazwa-tekst:hover{
+    cursor: pointer;
 }
 .dodaj{
     width: 30%;
@@ -26,4 +29,8 @@
 }
 .dodaj:hover{
     cursor: pointer;
+    width: 32%;
+    height: 34px;
+    opacity: 0.9;
+    transition-delay: 0.1s;
 }

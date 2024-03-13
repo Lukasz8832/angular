@@ -1,0 +1,64 @@
+
+.twojKosz{
+    margin-bottom: 70px;
+    margin-left: 20px;
+}
+.karta{
+    border: black 1px;
+    vertical-align: top;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+.kosz{
+    display: grid;
+}
+.zdjecie-div{
+    display: inline-block;
+    width: 200px;
+    margin-right: 440px;
+}
+.tekst{
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+}
+.zdjecie{
+    width: 70%;
+    height: 95px;
+}
+.nazwa{
+    font-style: bold;
+    font-size: 15px;
+    text-align: center;
+    height: 30px;
+    
+}
+.nazwa-div{
+    text-align: center;
+}
+.cena-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cena{
+    display: inline-block;
+}
+.usun{
+    display: inline-block;
+    background-color: rgb(233, 46, 46);
+    color: snow;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    height: 20px;
+}
+.usun:hover{
+    cursor: pointer;
+}
+.usun:active{
+    opacity: 0.8;
+}
+.suma-div{
+    margin-left: 52%;
+
+}

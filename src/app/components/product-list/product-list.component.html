@@ -6,11 +6,11 @@
             <img class="obraz" src="{{produkt.image}}">
             <div class="tekst">
                 <div class="nazwa">
-                    {{produkt.title}}
+                    <a class="nazwa-tekst" (click)="navigateTo(produkt.id)">{{produkt.title}}</a>
                 </div>
                 <div class="cena-kup">
                     {{produkt.price}} zł
-                    <button (click)="navigateTo(produkt.id)" class="kupuj" title="Dodaj do koszyka" type="submit">Dodaj do koszyka</button>
+                    <button class="kupuj" (click)="addToCart(produkt)" title="Dodaj do koszyka" type="submit">Dodaj do koszyka</button>
                 </div>
             </div>
         </div>

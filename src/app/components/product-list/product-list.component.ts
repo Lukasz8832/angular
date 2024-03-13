@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { RestService, produkt } from '../../services/rest.service';
 import { Observable, Subscription } from 'rxjs';
 import { HttpClient, HttpResponse } from '@angular/common/http';
@@ -13,11 +13,10 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 })
 export class ProductListComponent implements OnInit{
   products?: Subscription
-  //products_lista: Array<any> = [];
-  products_list?: Array<produkt>
+  products_list!: Array<produkt>
   link = ""
   idParam?: string|number
-  constructor(private apiService: RestService, private http: HttpClient, private router: Router){
+  constructor(public apiService: RestService, private http: HttpClient, private router: Router){
   }
   ngOnInit() : any {
     this.products_lista()
@@ -42,4 +41,9 @@ export class ProductListComponent implements OnInit{
       }
     })
   }
-}
+  addToCart(product : produkt)
+  {
+    this.apiService.ProductsList.push(product)
+    console.log(this.apiService.ProductsList)
+   }
+  }

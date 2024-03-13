@@ -1,0 +1,18 @@
+<app-navigation></app-navigation>
+<h1 class="twojKosz">Twój koszyk</h1>
+@for (produkt of this.KoszykZawartosc; track $index) {
+    <div class="karta">
+        <div class="zdjecie-div">
+        <img class="zdjecie" src="{{produkt.image}}">
+        </div>
+        <div class="tekst">
+            <div class="nazwa-div"><a class="nazwa">{{produkt.title}}</a></div>
+            <div class="kategoria-div"><a class="kategoria">Kategoria: {{produkt.category}}</a></div>
+            <div class="cena-div">
+                <a class="cena">Cena: {{produkt.price}} zł</a>
+                <button class="usun" (click)="usun(produkt)">Usuń z koszyka</button>
+            </div>
+        </div>
+    </div>
+}
+<div class="suma-div"><a>Razem: {{Cena}}</a></div>

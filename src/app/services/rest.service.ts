@@ -14,8 +14,9 @@ export interface produkt {
   providedIn: 'root'
 })
 export class RestService {
+  idParam!: number
+  ProductsList: Array<produkt> = []
   constructor(private http: HttpClient) { 
-    
   }
   link = "https://fakestoreapi.com"
   getProdukt(): Observable<HttpResponse<Array<produkt>>>{
