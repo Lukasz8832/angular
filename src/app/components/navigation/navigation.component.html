@@ -5,12 +5,12 @@
 <body>
     <div class="pasek">
         <div class="lewo">
-            <a  title="nasz-sklep.pl" class="nazwa" >nasz-sklep.pl</a>
+            <a  (click)="navigateToHome()" title="nasz-sklep.pl" class="nazwa" >nasz-sklep.pl</a>
         </div>
         <div class="szukaj">
             <form    class="example">
                  <input type="text" id="input1" name="input1" [(ngModel)]="cos" class="szukajO" name="q" placeholder="Szukaj" required>
-                 <button (click)="wyszukaj()"  id="nav" class="szukaj-przycisk"  title="Wyszukaj"><a><img class="szukaj-ico" src="./../../../assets/szukaj-ico.png"></a></button>
+                 <button (click)="wyszukaj()" type="button"  id="nav" class="szukaj-przycisk"  title="Wyszukaj"><a><img class="szukaj-ico" src="./../../../assets/szukaj-ico.png"></a></button>
               </form>
         </div>
         <div class="prawo">

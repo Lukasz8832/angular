@@ -5,8 +5,8 @@
             <div class="obraz-div"></div>
             <img class="obraz" src="{{produkt.image}}">
             <div class="tekst">
-                <div class="nazwa">
-                    <a class="nazwa-tekst" (click)="navigateTo(produkt.id)">{{produkt.title}}</a>
+                <div (click)="navigateTo(produkt.id)" class="nazwa">
+                    <a class="nazwa-tekst" >{{produkt.title}}</a>
                 </div>
                 <div class="cena-kup">
                     {{produkt.price}} zł

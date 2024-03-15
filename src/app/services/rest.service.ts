@@ -14,7 +14,7 @@ export interface produkt {
   providedIn: 'root'
 })
 export class RestService {
-  Cena!: number
+  Cena: number = 0
   idParam!: number
   ProductsList: Array<produkt> = []
   ProductsListAll: Array<produkt> = []
@@ -47,6 +47,7 @@ export class RestService {
       this.Cena = this.Cena + zmienna.price
 
   })
+  this.Cena = Number(this.Cena.toFixed(2))
   return this.Cena
 }
   }

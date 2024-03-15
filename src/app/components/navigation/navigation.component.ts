@@ -38,11 +38,13 @@ export class NavigationComponent implements OnInit {
   }
   wyszukaj(){
     console.log(this.cos)
+    console.log(this.apiService.ProductsListAll)
     this.apiService.ProductsListAll!.forEach((zmienna : produkt) =>
     {
       if(this.cos?.trim() == zmienna.title.trim())
       {
         this.router.navigate([`/produkt/${zmienna.id}`])
+        this.ngOnInit
         console.log(zmienna.id)
       }
   })
@@ -50,10 +52,13 @@ export class NavigationComponent implements OnInit {
   refresh()
   {
     this.Cena = this.apiService.Cena
-     if (document.getElementById("suma") != null)
+     if (this.Cena != 0)
       {
          document.getElementById("suma")!.style.visibility = "visible"
       }
    
    }
+   navigateToHome(){
+    this.router.navigate([`/sklep`])
+  }
    }
