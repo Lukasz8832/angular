@@ -11,7 +11,7 @@
                 <div class="category"> kategoria: {{produkt?.category}}</div>
                 <div class="opis">{{produkt?.description}}</div>
                 <div class="cena">{{produkt?.price}} zł</div>
-                <button class="dodaj">Dodaj do koszyka</button>
+                <button class="dodaj" (click)="[addToCart(produkt!), sumuj()]" >Dodaj do koszyka</button>
             </div>
         </div>
     </div>

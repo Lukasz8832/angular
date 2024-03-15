@@ -10,9 +10,9 @@
             <div class="kategoria-div"><a class="kategoria">Kategoria: {{produkt.category}}</a></div>
             <div class="cena-div">
                 <a class="cena">Cena: {{produkt.price}} zł</a>
-                <button class="usun" (click)="usun(produkt)">Usuń z koszyka</button>
+                <button class="usun" (click)="[usun(produkt)]">Usuń z koszyka</button>
             </div>
         </div>
     </div>
 }
-<div class="suma-div"><a>Razem: {{Cena}}</a></div>
+<div class="suma-div"><a>Razem: {{Cena}} zł</a></div>

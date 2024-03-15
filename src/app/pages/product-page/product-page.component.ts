@@ -15,6 +15,7 @@ export class ProductPageComponent implements OnInit {
   constructor(private apiService: RestService, private route:  ActivatedRoute, private http: HttpClient){
   }
   idParam!: number
+
   link = "http://localhost:4200"
   produkt?: produkt
   products?: Subscription
@@ -42,6 +43,11 @@ export class ProductPageComponent implements OnInit {
     this.checkUrl()
     this.wezProdukt()
   }
-
-
+  addToCart(produkt: produkt)
+  {
+    this.apiService.addToCart(produkt)
+  }
+  sumuj(){
+    console.log(this.apiService.sumuj())
+  }
 }

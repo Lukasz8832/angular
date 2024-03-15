@@ -81,3 +81,17 @@
 .ulubione{
     width: 30px;
 }
+.kosz-div{
+    position: relative;
+}
+.suma{
+    position: absolute;
+    width: 30px;
+    font: 1px;
+    background-color: red;
+    border: solid red;
+    border-radius: 10px;
+    bottom: 0px;
+    right:  10px;
+    visibility: hidden;
+}

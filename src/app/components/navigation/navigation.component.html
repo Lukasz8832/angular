@@ -1,3 +1,4 @@
+
 <head>
     <title>Strona główna</title>
 </head>
@@ -7,15 +8,18 @@
             <a  title="nasz-sklep.pl" class="nazwa" >nasz-sklep.pl</a>
         </div>
         <div class="szukaj">
-            <form id="as" onsubmit="" class="example" action="action_page.php">
-                 <input  id="a" type="text" class="szukajO" name="q" placeholder="Szukaj" [(ngModel)]="cos" required>
-                 <button (click)="getPost()"  id="nav" class="szukaj-przycisk"  title="Wyszukaj"><a><img class="szukaj-ico" src="./../../../assets/szukaj-ico.png"></a></button>
+            <form    class="example">
+                 <input type="text" id="input1" name="input1" [(ngModel)]="cos" class="szukajO" name="q" placeholder="Szukaj" required>
+                 <button (click)="wyszukaj()"  id="nav" class="szukaj-przycisk"  title="Wyszukaj"><a><img class="szukaj-ico" src="./../../../assets/szukaj-ico.png"></a></button>
               </form>
         </div>
         <div class="prawo">
             <a ><img class="konto" alt="Twoje konto" title="Twoje konto" src="./../../../assets/konto.png"></a>
             <a><img class="ulubione" alt="ulubione" title="Ulubione" src="./../../../assets/ulubione.png"></a>
-            <a (click)="navigateToCart()"><img class="kosz" alt="Kosz" title="Kosz" src="./../../../assets/kosz.png"></a>
+            <div class="koszyk-div">
+                <a (click)="navigateToCart()"><img class="kosz" alt="Kosz" title="Kosz" src="./../../../assets/kosz.png"></a>
+                <a id="suma" class="suma">{{Cena}}</a>
+            </div>
         </div>
     </div>
 </body>

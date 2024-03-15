@@ -29,8 +29,6 @@
 }
 .dodaj:hover{
     cursor: pointer;
-    width: 32%;
-    height: 34px;
     opacity: 0.9;
     transition-delay: 0.1s;
 }

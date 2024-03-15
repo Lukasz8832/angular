@@ -1,46 +1,59 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, NgModule, OnInit } from '@angular/core';
 import { RestService } from '../../services/rest.service';
 import { Route, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {produkt } from '../../services/rest.service';
 import { ProductListComponent } from '../product-list/product-list.component';
+
 @Component({
   selector: 'app-navigation',
   standalone: true,
   providers: [ProductListComponent],
-  imports: [FormsModule],
+  imports: [
+    FormsModule,
+    ReactiveFormsModule
+  ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css'
 })
-export class NavigationComponent {
+export class NavigationComponent implements OnInit {
   serviceForm: any;
   nazwaProduktu? : any
   elementRef: any;
   cos?: string
   id: number = 0
-  constructor(private http: HttpClient, private apiService: RestService, private router: Router)
+  Cena?: number
+  constructor(private ref: ChangeDetectorRef, private http: HttpClient, private apiService: RestService, private router: Router)
   {
-
+    setInterval(() => {
+      this.refresh()
+     }, 20);
   }
-
-  getPost(){
-    console.log("sdasd")
-    console.log(this.apiService.ProductsList)
-      this.apiService.ProductsList.forEach((zmienna : produkt) =>
-    {  
-      console.log(this.cos)
-            if(zmienna.title == this.cos){
-              this.router.navigate([`/produkt/${zmienna.id}`])
-               console.log(zmienna.title)
-            } 
-  })
-  }
-  search(){
-    this.nazwaProduktu = document.getElementById('as');
-    console.log(this.nazwaProduktu)
+  ngOnInit(): void {
+    console.log()
   }
   navigateToCart(){
     this.router.navigate([`/koszyk`])
   }
-}
+  wyszukaj(){
+    console.log(this.cos)
+    this.apiService.ProductsListAll!.forEach((zmienna : produkt) =>
+    {
+      if(this.cos?.trim() == zmienna.title.trim())
+      {
+        this.router.navigate([`/produkt/${zmienna.id}`])
+        console.log(zmienna.id)
+      }
+  })
+  }
+  refresh()
+  {
+    this.Cena = this.apiService.Cena
+     if (document.getElementById("suma") != null)
+      {
+         document.getElementById("suma")!.style.visibility = "visible"
+      }
+   
+   }
+   }

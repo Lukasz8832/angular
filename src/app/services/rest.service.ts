@@ -14,8 +14,10 @@ export interface produkt {
   providedIn: 'root'
 })
 export class RestService {
+  Cena!: number
   idParam!: number
   ProductsList: Array<produkt> = []
+  ProductsListAll: Array<produkt> = []
   constructor(private http: HttpClient) { 
   }
   link = "https://fakestoreapi.com"
@@ -33,5 +35,19 @@ export class RestService {
       responseType: 'json'
     })
   }
+  addToCart(product : produkt)
+  {
+    this.ProductsList.push(product)
+    console.log(this.ProductsList)
+   }
+   sumuj(){
+    this.Cena = 0  
+    this.ProductsList!.forEach((zmienna : produkt) =>
+    {
+      this.Cena = this.Cena + zmienna.price
+
+  })
+  return this.Cena
+}
   }
   

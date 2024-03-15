@@ -18,8 +18,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    NavigationComponent,
     FooterComponent,
+    NavigationComponent
   ],
   exports: [ShopingCartPageComponent]
 })

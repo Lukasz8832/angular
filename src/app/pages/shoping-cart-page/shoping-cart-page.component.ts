@@ -1,6 +1,7 @@
 import { Component, OnInit, numberAttribute } from '@angular/core';
 import { RestService, produkt } from '../../services/rest.service';
 import { ProductListComponent } from '../../components/product-list/product-list.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shoping-cart-page',
@@ -11,27 +12,23 @@ import { ProductListComponent } from '../../components/product-list/product-list
 })
 export class ShopingCartPageComponent implements OnInit {
   KoszykZawartosc?: Array<produkt>
-  Cena: number = 0
+  Cena?: number
   index : any = 0
-  constructor(private apiService : RestService, private ok: ProductListComponent  ){
+  constructor(private router: Router, private apiService : RestService, private ok: ProductListComponent  ){
     this.KoszykZawartosc = apiService.ProductsList
   }
   ngOnInit(): void {
     console.log(this.apiService.ProductsList)
     this.sumuj()
   }
-  sumuj(){
-    this.Cena = 0  
-    this.KoszykZawartosc!.forEach((zmienna : produkt) =>
-    {
-      this.Cena = this.Cena + zmienna.price
-      console.log(this.Cena)
-  })}
   usun(nazwa: produkt){
     this.index = this.KoszykZawartosc?.indexOf(nazwa)    
     this.KoszykZawartosc?.splice(this.index, 1)
     console.log(this.index)
     this.sumuj()
   
+  }
+  sumuj(){
+   this.Cena =  this.apiService.sumuj()
   }
 }

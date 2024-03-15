@@ -13,14 +13,14 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 })
 export class ProductListComponent implements OnInit{
   products?: Subscription
-  products_list!: Array<produkt>
+  products_list?: Array<produkt>
   link = ""
   idParam?: string|number
   constructor(public apiService: RestService, private http: HttpClient, private router: Router){
   }
   ngOnInit() : any {
     this.products_lista()
-    
+    this.refresh()
   }
   navigateTo(id: number){
     this.router.navigate([`/produkt/${id}`])
@@ -31,6 +31,7 @@ export class ProductListComponent implements OnInit{
       next: (response) => {
         if(response.body){
           this.products_list = response.body
+          this.apiService.ProductsListAll = this.products_list
         }
         else
         {
@@ -41,9 +42,13 @@ export class ProductListComponent implements OnInit{
       }
     })
   }
-  addToCart(product : produkt)
-  {
-    this.apiService.ProductsList.push(product)
-    console.log(this.apiService.ProductsList)
-   }
+  addToCart(produkt: produkt){
+    this.apiService.addToCart(produkt)
+  }
+  sumuj(){
+    console.log(this.apiService.sumuj())
+  }
+  refresh(){
+
+  }
   }
