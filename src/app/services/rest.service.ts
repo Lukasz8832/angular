@@ -16,6 +16,7 @@ export interface produkt {
 export class RestService {
   Cena: number = 0
   idParam!: number
+  id!: number 
   ProductsList: Array<produkt> = []
   ProductsListAll: Array<produkt> = []
   constructor(private http: HttpClient) { 

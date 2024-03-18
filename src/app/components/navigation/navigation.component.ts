@@ -43,12 +43,12 @@ export class NavigationComponent implements OnInit {
     {
       if(this.cos?.trim() == zmienna.title.trim())
       {
-        this.router.navigate([`/produkt/${zmienna.id}`])
-        this.ngOnInit
+       this.apiService.id = zmienna.id 
+        this.router.navigate([`/produkt/${zmienna.id}`]) 
         console.log(zmienna.id)
       }
   })
-  }
+}
   refresh()
   {
     this.Cena = this.apiService.Cena
@@ -56,9 +56,9 @@ export class NavigationComponent implements OnInit {
       {
          document.getElementById("suma")!.style.visibility = "visible"
       }
-   
-   }
-   navigateToHome(){
+    }
+
+    navigateToHome(){
     this.router.navigate([`/sklep`])
   }
    }
