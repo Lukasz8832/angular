@@ -41,11 +41,10 @@
     background-color: white;
 }
 .szukaj-przycisk{
-    height: 34px;
+    height: 30px;
     width: 15%;
     background-color: lightgray;
-    border-color: #5DCCFF;
-    border-left: none;
+    border: none;
     border-radius: 15px; 
     margin-top: -10px;
     display: inline-block;
@@ -57,6 +56,9 @@
 }
 .szukaj-przycisk:hover {
     cursor: pointer;
+}
+.szukaj-przycisk:active{
+     background-color: rgb(192, 192, 192);
 }
 .example{
     align-items: center;

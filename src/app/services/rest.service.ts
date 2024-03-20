@@ -16,7 +16,8 @@ export interface produkt {
 export class RestService {
   Cena: number = 0
   idParam!: number
-  id!: number 
+  id!: number
+  ProductsDictionary = new Map<produkt, number>
   ProductsList: Array<produkt> = []
   ProductsListAll: Array<produkt> = []
   constructor(private http: HttpClient) { 
@@ -50,6 +51,18 @@ export class RestService {
   })
   this.Cena = Number(this.Cena.toFixed(2))
   return this.Cena
+}
+addToDict(produkt : produkt){
+  if(this.ProductsDictionary.has(produkt)){
+    this.updateValueInDict
+  }
+}
+updateValueInDict = <K extends keyof typeof this.ProductsDictionary>(
+  obj: typeof this.ProductsDictionary,
+  key: K,
+  upDatedValue: (typeof this.ProductsDictionary)[K]
+): void => {
+  obj[key] = upDatedValue
 }
   }
   

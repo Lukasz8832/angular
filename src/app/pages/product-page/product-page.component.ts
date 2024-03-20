@@ -31,6 +31,8 @@ export class ProductPageComponent implements OnInit {
     next: (response) => {
       if(response.body){
         this.produkt = response.body
+        console.log("Trst")
+         console.log(this.produkt)
       }
     },
     error: (error) =>

@@ -56,6 +56,10 @@ export class NavigationComponent implements OnInit {
       {
          document.getElementById("suma")!.style.visibility = "visible"
       }
+      else
+      {
+        document.getElementById("suma")!.style.visibility = "hidden"
+      }
     }
 
     navigateToHome(){
